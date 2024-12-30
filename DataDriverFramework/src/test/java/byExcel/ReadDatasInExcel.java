@@ -37,7 +37,7 @@ public class ReadDatasInExcel {
 
 	@DataProvider(name = "LoginDatas")
 	public Object[][] readDatasInExcel() throws IOException {
-		String filePath = "D:\\\\DataDriverFramework\\\\Login.xlsx";
+		String filePath = "D:\\DataDriverFramework\\Login.xlsx";
 		FileInputStream fis = new FileInputStream(filePath);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheet("Sheet1");
