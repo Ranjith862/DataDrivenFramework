@@ -1,12 +1,8 @@
-package byExcel;
+package test;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +12,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class ReadDatasInExcel {
+import utils.ExcelUtils;
+
+public class LoginByExcelData {
 	WebDriver driver;
 
 	@BeforeTest
@@ -25,45 +23,34 @@ public class ReadDatasInExcel {
 		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().window().maximize();
-
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@AfterTest
 	public void closeChrome() {
-		if (driver != null) {
-			driver.quit();
-		}
+		driver.close();
 	}
 
-	@DataProvider(name = "LoginDatas")
-	public Object[][] readDatasInExcel() throws IOException {
+	@DataProvider(name = "loginData1")
+	public Object[][] loginTestData1() throws IOException {
 		String filePath = "D:\\DataDriverFramework\\Login.xlsx";
-		FileInputStream fis = new FileInputStream(filePath);
-		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		XSSFSheet sheet = workbook.getSheet("Sheet1");
+		String sheetName = "sheet1";
+		return ExcelUtils.readExcelDatas(filePath, sheetName);
 
-		int rowCount = sheet.getPhysicalNumberOfRows();
-		int cellCount = sheet.getRow(0).getPhysicalNumberOfCells();
-
-		// Create a 2D array to hold the data
-		Object[][] datas = new Object[rowCount - 1][cellCount];
-
-		// Loop through rows and columns to populate the data array.
-		// When we know the rows and colums clearly then we use this way:
-		for (int i = 1; i < rowCount; i++) {
-			Row row = sheet.getRow(i);
-			datas[i - 1][0] = row.getCell(0).getStringCellValue(); // Username
-			datas[i - 1][1] = row.getCell(1).getStringCellValue(); // Password
-		}
-		workbook.close();
-		fis.close();
-		return datas;
 	}
+	
+	//We can resue the ExcelUtils >> readExcelDatas() method.
+	@DataProvider(name = "loginData2")
+	public Object[][] loginTestData2() throws IOException {
+		String filePath = "D:\\DataDriverFramework\\OrangeHRMLoginTestCase2.xlsx";
+		String sheetName = "sheet1";
+		return ExcelUtils.readExcelDatas(filePath, sheetName);
 
-	@Test(dataProvider = "LoginDatas")
+	}
+   
+	@Test(dataProvider = "loginData2")
 	public void loginFunction(String username, String password) {
 		System.out.println("Username: " + username + ", Password: " + password);
-		driver.manage().timeouts().implicitlyWait(9, TimeUnit.SECONDS);
 
 		WebElement uname = driver.findElement(By.xpath("//input[@name='username']"));
 		WebElement pword = driver.findElement(By.xpath("//input[@name='password']"));
@@ -73,4 +60,5 @@ public class ReadDatasInExcel {
 		pword.sendKeys(password);
 		loginButton.click();
 	}
+
 }

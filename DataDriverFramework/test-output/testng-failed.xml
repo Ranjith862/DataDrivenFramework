@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="byExcel.WriteDatasInExcel">
+      <class name="test.LoginByExcelData">
         <methods>
-          <include name="writeDatasOnExcel"/>
+          <include name="closeChrome"/>
+          <include name="loginFunction"/>
+          <include name="openChrome"/>
         </methods>
-      </class> <!-- byExcel.WriteDatasInExcel -->
+      </class> <!-- test.LoginByExcelData -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

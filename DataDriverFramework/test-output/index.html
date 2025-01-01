@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ADMIN\AppData\Local\Temp\testng-eclipse--89285924\testng-customsuite.xml</span>
+                    <span>C:\Users\ADMIN\AppData\Local\Temp\testng-eclipse--1413578312\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,22 +103,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="byExcel.ReadDatasInExcel" class="method navigator-link" hash-for-method="loginFunction(wrong, wrong)">loginFunction(wrong, wrong)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.LoginByExcelData" class="method navigator-link" hash-for-method="loginFunction(Admin, invalidpword)">loginFunction(Admin, invalidpword)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="byExcel.ReadDatasInExcel" class="method navigator-link" hash-for-method="loginFunction(Admin, admin123)">loginFunction(Admin, admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.LoginByExcelData" class="method navigator-link" hash-for-method="loginFunction(Admin, admin123)">loginFunction(Admin, admin123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="byExcel.ReadDatasInExcel" class="method navigator-link" hash-for-method="loginFunction(Admin, wrong)">loginFunction(Admin, wrong)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.LoginByExcelData" class="method navigator-link" hash-for-method="loginFunction(invaliduname, admin123)">loginFunction(invaliduname, admin123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="byExcel.ReadDatasInExcel" class="method navigator-link" hash-for-method="loginFunction(wrong, admin123)">loginFunction(wrong, admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="test.LoginByExcelData" class="method navigator-link" hash-for-method="loginFunction(invaliduname, invalidpword)">loginFunction(invaliduname, invalidpword)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -136,15 +136,15 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">byExcel.ReadDatasInExcel</span>
+              <span class="class-name">test.LoginByExcelData</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginFunction(wrong, wrong)">
-                  </a> <!-- loginFunction(wrong, wrong) -->
+                  <a name="loginFunction(Admin, invalidpword)">
+                  </a> <!-- loginFunction(Admin, invalidpword) -->
                   <span class="method-name">loginFunction</span>
-                  <span class="parameters">(wrong,wrong)</span>
+                  <span class="parameters">(Admin,invalidpword)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -157,18 +157,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginFunction(Admin, wrong)">
-                  </a> <!-- loginFunction(Admin, wrong) -->
+                  <a name="loginFunction(invaliduname, admin123)">
+                  </a> <!-- loginFunction(invaliduname, admin123) -->
                   <span class="method-name">loginFunction</span>
-                  <span class="parameters">(Admin,wrong)</span>
+                  <span class="parameters">(invaliduname,admin123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginFunction(wrong, admin123)">
-                  </a> <!-- loginFunction(wrong, admin123) -->
+                  <a name="loginFunction(invaliduname, invalidpword)">
+                  </a> <!-- loginFunction(invaliduname, invalidpword) -->
                   <span class="method-name">loginFunction</span>
-                  <span class="parameters">(wrong,admin123)</span>
+                  <span class="parameters">(invaliduname,invalidpword)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -176,7 +176,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ADMIN\AppData\Local\Temp\testng-eclipse--89285924\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ADMIN\AppData\Local\Temp\testng-eclipse--1413578312\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,7 +185,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;byExcel.ReadDatasInExcel&quot;/&gt;
+      &lt;class name=&quot;test.LoginByExcelData&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -228,25 +228,25 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginFunction')
-data.setCell(0, 2, 'byExcel.ReadDatasInExcel')
-data.setCell(0, 3, 12998);
+data.setCell(0, 2, 'test.LoginByExcelData')
+data.setCell(0, 3, 2601);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginFunction')
-data.setCell(1, 2, 'byExcel.ReadDatasInExcel')
-data.setCell(1, 3, 2288);
+data.setCell(1, 2, 'test.LoginByExcelData')
+data.setCell(1, 3, 1938);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginFunction')
-data.setCell(2, 2, 'byExcel.ReadDatasInExcel')
-data.setCell(2, 3, 1980);
+data.setCell(2, 2, 'test.LoginByExcelData')
+data.setCell(2, 3, 1608);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loginFunction')
-data.setCell(3, 2, 'byExcel.ReadDatasInExcel')
-data.setCell(3, 3, 806);
+data.setCell(3, 2, 'test.LoginByExcelData')
+data.setCell(3, 3, 493);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 6 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -272,30 +272,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">byExcel.ReadDatasInExcel</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.LoginByExcelData</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">openChrome</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">loginFunction(Admin, wrong)</span>
-                <span class="method-start">11652 ms</span>
+                <span class="method-name">loginFunction(Admin, invalidpword)</span>
+                <span class="method-start">8249 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">loginFunction(wrong, admin123)</span>
-                <span class="method-start">13643 ms</span>
+                <span class="method-name">loginFunction(invaliduname, admin123)</span>
+                <span class="method-start">8750 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">loginFunction(wrong, wrong)</span>
-                <span class="method-start">14455 ms</span>
+                <span class="method-name">loginFunction(invaliduname, invalidpword)</span>
+                <span class="method-start">10692 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginFunction(Admin, admin123)</span>
-                <span class="method-start">27455 ms</span>
+                <span class="method-start">12303 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeChrome</span>
-                <span class="method-start">29749 ms</span>
+                <span class="method-start">14910 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
